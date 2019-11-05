@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import GameMaster from "./GameMaster";
 
-const App = () => (
-  <h1>Minimal React</h1>  
-)
+const App = () => <GameMaster />;
 
-export default App
+export default App;
