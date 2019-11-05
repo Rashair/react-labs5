@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 import Player from "./Player";
 
@@ -14,7 +15,6 @@ class GameMaster extends React.Component {
   }
 
   onPlayClick(name) {
-    console.log(name);
     this.setState(oldstate => ({
       playingNowOne: name === oldstate.nameOne,
       playingNowTwo: name === oldstate.nameTwo
@@ -23,7 +23,7 @@ class GameMaster extends React.Component {
 
   render() {
     return (
-      <div className="ml-5">
+      <div className="mx-auto" style={{ width: "800px" }}>
         <Player
           name={this.state.nameOne}
           playingNow={this.state.playingNowOne}
@@ -34,11 +34,10 @@ class GameMaster extends React.Component {
           playingNow={this.state.playingNowTwo}
           btnClick={this.onPlayClick}
         />
-        <form>
+        <form className="mt-5">
           <div className="form-group row">
             <label htmlFor="One" className="col-sm-2">
-              {" "}
-              User 1 name:{" "}
+              User 1 name:
             </label>
             <div className="col-sm-8">
               <input
@@ -53,8 +52,7 @@ class GameMaster extends React.Component {
           <br />
           <div className="form-group row">
             <label htmlFor="Two" className="col-sm-2">
-              {" "}
-              User 2 name:{" "}
+              User 2 name:
             </label>
             <div className="col-sm-8">
               <input

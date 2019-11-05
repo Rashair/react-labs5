@@ -8,10 +8,6 @@ class Player extends React.Component {
     };
   }
 
-  componentDidMount() {}
-
-  componentDidUpdate() {}
-
   render() {
     return (
       <div className="row card">
@@ -19,7 +15,7 @@ class Player extends React.Component {
         <span>I played for {this.state.count} rounds</span>
         <button
           type="button"
-          onClick={e => {
+          onClick={() => {
             this.props.btnClick(this.props.name);
             this.setState(oldstate => ({
               count: oldstate.count + 1
